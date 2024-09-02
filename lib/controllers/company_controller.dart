@@ -56,7 +56,5 @@ class CompanyController extends GetxController {
     );
   }
 
-  void logout() async {
-    await FirebaseAuth.instance.signOut();
-  }
+
 }

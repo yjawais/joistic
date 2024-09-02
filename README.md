@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
+## App Screenshots
 
-This project is a starting point for a Flutter application.
+<img src="assets/1.jpg" alt="Login screen Screenshot" width="200"/>
+<img src="assets/2.jpg" alt="Home Screen Screenshot" width="200"/>
+<img src="assets/3.jpg" alt="Search screen Screenshot" width="200"/>
+<img src="assets/4.jpg" alt="Apply to job Screenshot" width="200"/>
+<img src="assets/5.jpg" alt="Applied successfully Screenshot" width="200"/>
+<img src="assets/6.jpg" alt="Applied job Screenshot" width="200"/>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Login screen Screenshot](assets/1.jpg)
+![Home Screen Screenshot](assets/3.jpg)
+![Search screen Screenshot](assets/2.jpg)
+![Apply to job Screenshot](assets/4.jpg)
+![Applied successfully Screenshot](assets/5.jpg)
+![Apllied job Screenshot](assets/6.jpg)

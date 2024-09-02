@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:joistic/controllers/company_controller.dart';
+import 'package:joistic/controllers/login_controller.dart';
 import 'package:joistic/models/company_model.dart';
 import 'package:joistic/widgets/company_bottom_sheet.dart';
 import 'package:joistic/widgets/company_tile_widget.dart';
@@ -14,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final CompanyController companyController = Get.put(CompanyController());
+    final LoginController loginController = Get.put(LoginController());
 
   void _showCompanyDetails(BuildContext context, Company company) {
     Get.bottomSheet(
@@ -96,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Padding(
       padding: const EdgeInsets.only(right: 15.0),
       child: IconButton(
-        onPressed: () => companyController.logout(),
+        onPressed: () => loginController.logout(),
         icon: Icon(
           Icons.logout_rounded,
           color: Colors.grey[900],

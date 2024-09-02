@@ -14,25 +14,32 @@ class LoginController extends GetxController {
         // User cancelled the sign-in process
         return;
       }
-      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
-      UserCredential userCredential = await _auth.signInWithCredential(credential);
+      UserCredential userCredential =
+          await _auth.signInWithCredential(credential);
       User? user = userCredential.user;
 
       if (user != null) {
         // Store user credentials in shared preferences
         SharedPreferences prefs = await SharedPreferences.getInstance();
         await prefs.setString('user_email', user.email ?? '');
-        await prefs.setBool('is_logged_in', true);
+        await prefs.setString('user_name', user.displayName ?? '');
 
         // Navigate to company listing page
-        Get.offAllNamed('/company-listing');
+        Get.offAllNamed('/home');
       }
     } catch (e) {
       Get.snackbar('Error', 'Failed to sign in with Google');
     }
+  }
+
+  void logout() async {
+    await _googleSignIn.signOut();
+    await FirebaseAuth.instance.signOut();
   }
 }
